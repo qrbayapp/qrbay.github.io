@@ -2,14 +2,14 @@
 <html dir="auto" lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>My Page Title</title>
+	<title>QRBay App</title>
 
-	<meta name="description" content="My Page Description" />
+	<meta name="description" content="QRBay App" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="assets/favicon.png" />
 
 	<meta property="og:title" content="My Page Title" />
-	<meta property="og:description" content="My Page Description" />
+	<meta property="og:description" content="QRBay - QRCode Scanner and Barcode Reader" />
 	<meta property="og:image" content="assets/og-image.png" />
 
 	<link rel="stylesheet" href="assets/tobi.css" />
@@ -22,30 +22,24 @@
 	<div class="app__logo-wrapper"> <img class="app__logo" src="assets/icon.png" alt="Mobile App Name"></div>
 	<div class="app__infos">
 		<h1 class="app__name">QRBay App</h1>
-		<p class="app__description">Scan all your QR codes quickly and securely</p>
+		<p class="app__description">QRCode Scanner and Barcode Reader</p>
 		<div class="app__buttons app__buttons--desktop">
-			<a href="https://play.google.com/store" class="app__button-play" target="_blank" title="Get on Google Play">
-				<img src="assets/google-play-badge.png" alt="Get on Google Play">
-			</a>
 			<a href="https://www.apple.com/ios/app-store/" class="app__button-ios" target="_blank" title="Get on Appstore">
 				<img src="assets/ios-badge.svg" alt="Get on Appstore">
-			</a>
-			<a href="https://github.com/" class="app__button-web" target="_blank" title="Go to website">
-				<img src="assets/pwa-badge.png" alt="Go to website">
 			</a>
 		</div>
 	</div>
 </header>
 <div class="app__buttons app__buttons--mobile container">
-	<a href="https://play.google.com/store" class="app__button-play" target="_blank" title="Get on Google Play">
+	<!-- <a href="https://play.google.com/store" class="app__button-play" target="_blank" title="Get on Google Play">
 		<img src="assets/google-play-badge.png" alt="Get on Google Play">
-	</a>
+	</a> -->
 	<a href="https://www.apple.com/ios/app-store/" class="app__button-ios" target="_blank" title="Get on Appstore">
 		<img src="assets/ios-badge.svg" alt="Get on Appstore">
 	</a>
-	<a href="https://github.com/" class="app__button-web" target="_blank" title="Go to website">
+	<!-- <a href="https://github.com/" class="app__button-web" target="_blank" title="Go to website">
 		<img src="assets/pwa-badge.png" alt="Go to website">
-	</a>
+	</a> -->
 </div>
 <section class="app__screenshots app__section">
 	<div class="container">
@@ -53,17 +47,23 @@
 	</div>
 	<div class="app__screenshots-wrapper container-desktop">
 		<div class="app__screenshots-list">
-			<a href="assets/screenshot.png" class="lightbox">
-				<img src="assets/screenshot.png" class="app__screenshot" alt="" />
+			<a href="assets/screenshot_1.png" class="lightbox">
+				<img src="assets/screenshot_1.png" class="app__screenshot" alt="" />
 			</a>
-			<a href="assets/screenshot.png" class="lightbox">
-				<img src="assets/screenshot.png" class="app__screenshot" alt="" />
+			<a href="assets/screenshot_2.png" class="lightbox">
+				<img src="assets/screenshot_2.png" class="app__screenshot" alt="" />
 			</a>
-			<a href="assets/screenshot.png" class="lightbox">
-				<img src="assets/screenshot.png" class="app__screenshot" alt="" />
+			<a href="assets/screenshot_3.png" class="lightbox">
+				<img src="assets/screenshot_3.png" class="app__screenshot" alt="" />
 			</a>
-			<a href="assets/screenshot.png" class="lightbox">
-				<img src="assets/screenshot.png" class="app__screenshot" alt="" />
+			<a href="assets/screenshot_4.png" class="lightbox">
+				<img src="assets/screenshot_4.png" class="app__screenshot" alt="" />
+			</a>
+			<a href="assets/screenshot_5.png" class="lightbox">
+				<img src="assets/screenshot_5.png" class="app__screenshot" alt="" />
+			</a>
+			<a href="assets/screenshot_6.png" class="lightbox">
+				<img src="assets/screenshot_6.png" class="app__screenshot" alt="" />
 			</a>
 		</div>
 	</div>
@@ -71,17 +71,23 @@
 <section class="app__fulldescription app__section container">
 	<h2 class="app__section-title">Description</h2>
 	<div class="app__fulldescription-content">
-		<p>A more complete description of the mobile app</p>
-<p>With a lot of features:</p>
+<b>With a lot of features:</b>
 <ul>
-<li>Feature 1</li>
-<li>Feature 2</li>
-<li>Feature 3</li>
+<li>Scan <b>QR Codes</b> and <b>Barcodes</b> using your device's camera.</li>
+<li>Available formats: QRCode, Code 39, Code 93, Code 128, EAN-8, EAN-13, UPC-A, UPC-E, ITF, Data Matrix, AZTec, PDF 417, Codabar.</li>
+<li>Scan QR code images from your photo library.</li>
+<li>Generate QR codes and barcodes.</li>
+<li>Save scan history and creation history of QR codes and barcodes.</li>
+<li>Easily share scanned and generated QR codes across your favorite social platforms with just a few taps.</li>
+<li>Customize QR codes according to your preferences.</li>
+<li>Batch scanning capability.</li>
+<li>Export data to CSV, text, or image formats.</li>
+<li>Multilingual support for up to 10 languages, including English, Vietnamese, Indonesian, Chinese, Thai, Korean, Japanese, French, German, Spanish, and more expansions.</li>
 </ul>
 
 	</div>
 </section>
-<section class="app__featured app__section container">
+<!-- <section class="app__featured app__section container">
 	<h2 class="app__section-title">Featured in</h2>
 	<div class="app__featured-content">
 		<a href="https://github.com/" target="_blank" class="app__featured-company"> 
@@ -91,27 +97,28 @@
 			<img src="assets/producthunt.png" class="app__featured-image">
 		</a> 
 	</div>
-</section>
+</section> -->
 		</main>
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__container">
 					<p class="footer__love">
-						<script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2024</noscript> All rights reserved
-							&mdash; Template by <a href="https://www.sandoche.com" target="_blank">Sandoche</a>
-							&mdash; Powered by <a href="https://t3mpl.n4no.com/" target="_blank" title="T3MPL Editor">T3MPL</a>
+						<script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2024</noscript> QRBay | QRCode Scanner and Barcode Reader</a>
 					</p>
 					<ul class="footer__links">
 							<li class="footer__link">
-								<a href="page-1.html">Privacy</a>
+								<a href="privacy.html">Privacy</a>
 							</li>
 							<li class="footer__link">
-								<a href="https://n4no.com/" targe="_blank">GitHub</a>
-							</li>
-							<li class="footer__link">
-								<a href="https://n4no.com/" targe="_blank">GitHub</a>
+								<a href="terms.html" targe="_blank">Terms</a>
 							</li>
 					</ul>
+				</div>
+
+				<div class="footer__container">
+					<p class="footer__love">
+						QR Code is a registered trademark of DENSO WAVE INCORPORATED in the United States and other countries.
+					</p>
 				</div>
 			</div>
 		</footer>
