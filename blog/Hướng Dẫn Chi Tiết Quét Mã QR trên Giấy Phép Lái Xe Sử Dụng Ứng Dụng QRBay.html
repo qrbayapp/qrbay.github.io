@@ -1,0 +1,681 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Hướng Dẫn Chi Tiết Quét Mã QR trên Giấy Phép Lái Xe Sử Dụng Ứng Dụng QRBay</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="23bee327-7b68-45c6-83a7-05c90af93db8" class="page sans"><header><h1 class="page-title">Hướng Dẫn Chi Tiết Quét Mã QR trên Giấy Phép Lái Xe Sử Dụng Ứng Dụng QRBay</h1><p class="page-description"></p></header><div class="page-body"><p id="0ae26c3e-90ca-4c4b-ab71-2fa747d7f0d3" class="">
+</p><p id="6d3f2af9-39e7-4389-837f-d844eb4951a3" class="">Trong bài viết này, chúng tôi sẽ hướng dẫn bạn cách sử dụng ứng dụng QRBay để quét giấy phép lái xe một cách nhanh chóng và dễ dàng. QRBay là một ứng dụng đa năng hỗ trợ quét mã QR và mã vạch, bao gồm cả mã QR trên giấy phép lái xe.</p><p id="a9b591bc-910b-44d2-a703-6406ff1473d1" class="">
+</p><div id="c95353a5-6dc1-4a32-9cf3-d0046e2edaa4" class="column-list"><div id="0917fb9a-5310-4a5a-b50a-3007a614c744" style="width:31.25%" class="column"><figure id="adbf1e80-4c9a-493b-a562-b5e21de3d1fd" class="image"><a href="Hu%CC%9Bo%CC%9B%CC%81ng%20Da%CC%82%CC%83n%20Chi%20Tie%CC%82%CC%81t%20Que%CC%81t%20Ma%CC%83%20QR%20tre%CC%82n%20Gia%CC%82%CC%81%2023bee3277b6845c683a705c90af93db8/Anh_man_hinh_2024-07-08_luc_23.37.03_2.jpeg"><img style="width:336px" src="Hu%CC%9Bo%CC%9B%CC%81ng%20Da%CC%82%CC%83n%20Chi%20Tie%CC%82%CC%81t%20Que%CC%81t%20Ma%CC%83%20QR%20tre%CC%82n%20Gia%CC%82%CC%81%2023bee3277b6845c683a705c90af93db8/Anh_man_hinh_2024-07-08_luc_23.37.03_2.jpeg"/></a></figure></div><div id="79de1f87-2697-4910-a1bd-52044f1fcbfc" style="width:68.75%" class="column"><figure id="431b44fa-7505-4956-8698-9a8f4b117f45" class="image"><a href="Hu%CC%9Bo%CC%9B%CC%81ng%20Da%CC%82%CC%83n%20Chi%20Tie%CC%82%CC%81t%20Que%CC%81t%20Ma%CC%83%20QR%20tre%CC%82n%20Gia%CC%82%CC%81%2023bee3277b6845c683a705c90af93db8/5043614_bang_lai_xe_co_ma_qr_1.jpeg"><img style="width:586px" src="Hu%CC%9Bo%CC%9B%CC%81ng%20Da%CC%82%CC%83n%20Chi%20Tie%CC%82%CC%81t%20Que%CC%81t%20Ma%CC%83%20QR%20tre%CC%82n%20Gia%CC%82%CC%81%2023bee3277b6845c683a705c90af93db8/5043614_bang_lai_xe_co_ma_qr_1.jpeg"/></a></figure></div></div><h3 id="1ef2352f-fa06-4422-bf88-5aa8b1d936a8" class="">🛠️ Bước 1: Tải và Cài Đặt Ứng Dụng QRBay 📥</h3><ol type="1" id="7d9ee23d-12b8-4198-a5bb-26a8f2705dc2" class="numbered-list" start="1"><li><strong>Truy cập vào App Store trên iOS</strong>:<ul id="b838b652-a97b-408f-ba66-22f752ecb69f" class="bulleted-list"><li style="list-style-type:disc">Đối với người dùng iOS, mở App Store và tìm kiếm &quot;QRBay&quot;.</li></ul><ul id="fa623e9c-fe92-4459-b639-2b0713c71d72" class="bulleted-list"><li style="list-style-type:disc"><a href="https://apps.apple.com/us/app/qrbay/id6499323043">Link tải về</a> 🌐 <a href="https://apps.apple.com/us/app/qrbay/id6499323043">https://apps.apple.com/us/app/qrbay/id6499323043</a></li></ul></li></ol><ol type="1" id="1d9ec089-71ef-4eec-baf4-aedfa9503dee" class="numbered-list" start="2"><li><strong>Tải và cài đặt ứng dụng</strong>:<ul id="81d434fe-1612-4c97-832c-b06033f9d909" class="bulleted-list"><li style="list-style-type:disc">Chọn &quot;Tải về&quot; và sau khi tải xong, nhấn &quot;Cài đặt&quot;. 📲</li></ul></li></ol><h3 id="d0251d8f-be0e-4d70-b375-be39a1efc7d7" class="">🛠️ Bước 2: Mở Ứng Dụng và Thiết Lập Ban Đầu 🔧</h3><ol type="1" id="53fa02c6-1b35-4a95-9142-9a4820b174a1" class="numbered-list" start="1"><li><strong>Mở ứng dụng</strong>:<ul id="da9fee3f-2b70-4d27-a665-7aa8d0212ce5" class="bulleted-list"><li style="list-style-type:disc">Sau khi cài đặt, nhấn vào biểu tượng QRBay trên màn hình chính của điện thoại. 📱</li></ul></li></ol><ol type="1" id="965fc9d5-06e4-4ce7-881b-db4cfa89bdc9" class="numbered-list" start="2"><li><strong>Thiết lập quyền truy cập</strong>:<ul id="d4eb3261-d046-41a9-a175-76b840f5a6fa" class="bulleted-list"><li style="list-style-type:disc">Khi mở ứng dụng lần đầu, QRBay sẽ yêu cầu quyền truy cập vào máy ảnh. Nhấn &quot;Cho phép&quot; để ứng dụng có thể sử dụng máy ảnh của bạn cho việc quét mã. 📸</li></ul></li></ol><h3 id="cafc9c2a-6ec0-4f06-87b3-fe30db85c4ee" class="">🛠️ Bước 3: Quét Mã QR trên Giấy Phép Lái Xe 📄</h3><ol type="1" id="e358f682-eeb2-4b20-adac-fea0803c501b" class="numbered-list" start="1"><li><strong>Chọn chức năng quét</strong>:<ul id="684b6210-2324-4fa5-84ac-a37aee6c75ca" class="bulleted-list"><li style="list-style-type:disc">Trong giao diện chính của QRBay, chọn biểu tượng máy quét hoặc chức năng &quot;Quét mã&quot;. 🔍</li></ul></li></ol><ol type="1" id="83860663-24eb-46e2-908d-a55e9ffdc110" class="numbered-list" start="2"><li><strong>Đặt giấy phép lái xe trong khung quét</strong>:<ul id="365aa020-9255-4cf4-81d6-b9488eaf8b92" class="bulleted-list"><li style="list-style-type:disc">Giữ giấy phép lái xe sao cho mã QR nằm trong khung quét trên màn hình điện thoại.</li></ul><ul id="875eea26-af82-4048-967c-79d8c43588a0" class="bulleted-list"><li style="list-style-type:disc">Đảm bảo ánh sáng đủ và không có vật cản che khuất mã QR để quá trình quét diễn ra thuận lợi. 💡</li></ul></li></ol><ol type="1" id="d579095f-1cd3-4de6-b4e0-eae85e7e7099" class="numbered-list" start="3"><li><strong>Chờ quá trình quét hoàn thành</strong>:<ul id="fd07d0cd-9c25-4d63-a763-f13e96d4a53b" class="bulleted-list"><li style="list-style-type:disc">Ứng dụng sẽ tự động nhận diện và quét mã QR. Quá trình này chỉ mất vài giây. ⏱️</li></ul></li></ol><h3 id="67fb7a12-5606-4c8c-90cb-eece4efde27b" class="">🛠️ Bước 4: Xem Thông Tin và Lưu Trữ 📁</h3><ol type="1" id="3a04be78-8209-4130-9ea6-6050fa8e99e7" class="numbered-list" start="1"><li><strong>Xem thông tin</strong>:<ul id="99d984a7-f215-46d4-99eb-6a771cb58c89" class="bulleted-list"><li style="list-style-type:disc">Sau khi quét xong, ứng dụng sẽ hiển thị các thông tin được mã hóa trong mã QR của giấy phép lái xe. ℹ️</li></ul></li></ol><ol type="1" id="d4bd027a-bd5c-4a23-90e0-1ded01fd648f" class="numbered-list" start="2"><li><strong>Lưu trữ hoặc chia sẻ thông tin</strong>:<ul id="cd48231e-68c3-4a74-892f-5ceb87156968" class="bulleted-list"><li style="list-style-type:disc">Bạn có thể lưu trữ thông tin này vào ứng dụng hoặc chia sẻ nó qua các ứng dụng khác như email, tin nhắn, hoặc các nền tảng mạng xã hội. 📤</li></ul></li></ol><h3 id="964095dd-4416-4df6-bc9f-39c2c9945032" class="">💡 Mẹo và Lưu Ý ⚠️</h3><ul id="4a8714ff-32e2-4cff-ae07-e71867d3a2ab" class="bulleted-list"><li style="list-style-type:disc"><strong>Đảm bảo độ sáng tốt</strong>: Quá trình quét sẽ dễ dàng hơn khi mã QR được chiếu sáng đủ. 🌟</li></ul><ul id="c15e9679-0145-4fab-b2a9-39acaf20348e" class="bulleted-list"><li style="list-style-type:disc"><strong>Giữ vững tay khi quét</strong>: Để đảm bảo quét nhanh và chính xác, cố gắng giữ điện thoại ổn định trong quá trình quét. 🤳</li></ul><ul id="dab01390-1785-4c7e-b47f-49f763d6114d" class="bulleted-list"><li style="list-style-type:disc"><strong>Cập nhật ứng dụng thường xuyên</strong>: Để đảm bảo tính năng và bảo mật, hãy luôn cập nhật phiên bản mới nhất của QRBay. 🔄</li></ul><h3 id="1cff32cb-c812-4db3-8295-984210a99a12" class="">🎉 Kết Luận 🎉</h3><p id="a58c9c64-505d-4dd6-8736-adf3d6e843e3" class="">Ứng dụng QRBay là công cụ tiện lợi giúp bạn quét mã QR trên giấy phép lái xe một cách dễ dàng và nhanh chóng. Với những bước hướng dẫn chi tiết trên, chúng tôi hy vọng bạn sẽ có trải nghiệm tốt khi sử dụng ứng dụng này. Hãy tải ngay QRBay và trải nghiệm những tiện ích mà ứng dụng mang lại!</p><p id="660ee964-f935-4f60-bcb5-a126ad656e98" class="">Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào, đừng ngần ngại để lại bình luận phía dưới. Chúc bạn thành công! 🌟</p><p id="c5972dc8-42ae-4c08-8ea3-325c7572023e" class="">
+</p><p id="8edee378-8303-4100-a1d2-5ff8983be33d" class=""><strong>Trang Facebook QRBay App</strong>: <a href="https://www.facebook.com/qrbayapp">https://www.facebook.com/qrbayapp</a></p><p id="98ab3adc-f83e-4207-b9e7-77781d5db75d" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
