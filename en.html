@@ -111,46 +111,47 @@
 	</div>
 </section> -->
 		</main>
+		
 		<footer class="footer">
-			<div class="container">
-				<div class="footer__container">
-					<p class="footer__love">
-						<script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2024</noscript> QRBay | QRCode Scanner and Barcode Reader</a>
-					</p>
-					<ul class="footer__links">
-							<li class="footer__link">
-								<a href="privacy.html">Privacy</a>
-							</li>
-							<li class="footer__link">
-								<a href="terms.html" targe="_blank">Terms</a>
-							</li>
-					</ul>
-				</div>
+    <div class="container footer__grid">
+        <!-- Logo và bản quyền -->
+        <div class="footer__section footer__logo-section">
+            <img src="assets/icon.png" alt="QRBay Logo" class="footer__logo">
+            <p class="footer__copyright footer__link">
+                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2024</noscript><a href="https://onelink.to/pu78nj"> QRBay | QRCode Scanner and Barcode Reader</a>
+            </p>
+        </div>
 
-				
-				<!-- Language -->
-				<div class="footer__container">
-					<p class="footer__love">
-						Language
-					</p>
-					<ul class="footer__links">
-							<li class="footer__link">
-								<a href="vi.html">Vietnamese</a>
-							</li>
-							<li class="footer__link">
-								<a href="cn.html" targe="_blank">Chinese</a>
-							</li>
-					</ul>
-				</div>
+        <!-- Liên kết -->
+        <div class="footer__section">
+            <p class="footer__title">Links</p>
+            <ul class="footer__links">
+                <li class="footer__link"><a href="privacy_en.html">Privacy Policy</a></li>
+                <li class="footer__link"><a href="terms_en.html" target="_blank">Terms and Conditions</a></li>
+                <li class="footer__link"><a href="support/index_en.html" target="_blank">FAQ / Support</a></li>
+            </ul>
+        </div>
 
-				<div class="footer__container">
-					<p class="footer__love">
-						QR Code is a registered trademark of DENSO WAVE INCORPORATED in the United States and other countries.
-					</p>
-				</div>
+        <!-- Ngôn ngữ -->
+        <div class="footer__section">
+            <p class="footer__title">Language</p>
+            <div class="footer__dropdown">
+                <button class="footer__dropbtn">Choose Language</button>
+                <div class="footer__dropdown-content">
+                    <a href="en.html">English</a>
+                    <a href="index.html">Tiếng Việt</a>
+                </div>
+            </div>
+        </div>
 
-			</div>
-		</footer>
+        <!-- Thông tin bản quyền QR -->
+        <div class="footer__section">
+            <p class="footer__info">QR Code is a registered trademark of DENSO WAVE INCORPORATED in the United States and other countries.</p>
+            <p class="footer__info"><b>Made in Vietnam with ♥️</b></p>
+        </div>
+    </div>
+</footer>
+
 
 		<script type="text/javascript" src="assets/tobi.min.js" /></script>
 		<script>

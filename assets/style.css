@@ -325,3 +325,249 @@ html[dir=rtl] .app__logo-wrapper {
   background-position-y: -10vh !important;
   background-repeat: no-repeat !important;
 }
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+    text-align: center;
+}
+
+.footer__section {
+    padding: 10px;
+}
+
+.footer__logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.footer__title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer__links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__link {
+    margin-bottom: 5px;
+}
+
+.footer__link a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__link a:hover {
+    color: #ddd;
+}
+
+.footer__copyright {
+    margin-top: 10px;
+}
+
+.footer__dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.footer__dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer__dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: left;
+}
+
+.footer__dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.footer__dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.footer__dropdown:hover .footer__dropdown-content {
+    display: block;
+}
+
+.footer__dropdown:hover .footer__dropbtn {
+    background-color: #3e8e41;
+}
+
+.footer__info {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media(min-width: 600px) {
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__logo-section {
+        grid-column: span 2;
+    }
+
+    .footer__info {
+        grid-column: span 2;
+        text-align: center;
+    }
+}
+
+@media(min-width: 900px) {
+    .footer__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer__logo-section {
+        grid-column: span 1;
+    }
+
+    .footer__info {
+        grid-column: span 4;
+        text-align: center;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer__section {
+    padding: 10px;
+}
+
+.footer__links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__link {
+    margin-bottom: 5px;
+}
+
+.footer__link a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__link a:hover {
+    color: #ddd;
+}
+
+.footer__title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer__copyright {
+    margin-top: 10px;
+}
+
+.footer__logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media(min-width: 600px) {
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__logo-section {
+        grid-column: span 2;
+    }
+
+    .footer__info {
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    .footer__links {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer__link {
+        margin: 0 10px;
+    }
+}
+
+@media(min-width: 900px) {
+    .footer__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer__logo-section {
+        grid-column: span 1;
+    }
+
+    .footer__info {
+        grid-column: span 4;
+        text-align: center;
+    }
+}
+
